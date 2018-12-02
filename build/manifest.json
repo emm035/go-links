@@ -1,0 +1,28 @@
+{
+  "name": "Go Links",
+  "description": "Quick links",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html?popup=true",
+    "default_icon": "favicon.ico"
+  },
+  "omnibox": { "keyword": "go" },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": ["storage", "webRequest", "webRequestBlocking", "*://go/*"],
+  "commands": {
+    "open-go-link-tab": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G",
+        "chromeos": "Ctrl+Shift+G",
+        "linux": "Ctrl+Shift+G"
+      },
+      "description": "Opens Go Links page",
+      "global": true
+    }
+  }
+}

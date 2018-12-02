@@ -1,0 +1,31 @@
+'use es6';
+
+const ActionTypes = (types =>
+  types.reduce((acc, val) => Object.assign(acc, { [val]: val }), {}))([
+  'GO_LINK_EDIT_SELECTED',
+
+  'GO_LINK_UPDATE_VALUE',
+
+  'GO_LINK_SAVE_STARTED',
+  'GO_LINK_SAVE_COMPLETED',
+
+  'GO_LINK_FETCH_STARTED',
+  'GO_LINK_FETCH_COMPLETED',
+
+  'GO_LINK_CREATE_STARTED',
+  'GO_LINK_CREATE_COMPLETED',
+
+  'GO_LINK_DELETE_STARTED',
+  'GO_LINK_DELETE_COMPLETED',
+
+  'GO_LINK_SYNC_STARTED',
+  'GO_LINK_SYNC_COMPLETED',
+
+  'GO_LINK_EDITOR_OPEN',
+  'GO_LINK_EDITOR_CLOSE',
+  'GO_LINK_DISCARD_CHANGES',
+
+  'GO_LINK_SEARCH_UPDATED',
+]);
+
+export default ActionTypes;
